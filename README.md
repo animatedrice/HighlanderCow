@@ -1,5 +1,5 @@
-# HighlanderCow
-Stardew mod that adds a Highlander cow breed.
+# Scottish Highland Cow
+Stardew mod that adds a Highland cow breed.
 
 ![Walk-cycle](https://github.com/animatedrice/HighlanderCow/assets/15009951/49781cc9-74b9-410e-b7a0-87398a0a6183)
 
