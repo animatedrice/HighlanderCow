@@ -1,0 +1,143 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+        "HighlanderBreed": {
+            "Description": "This enables the Highland Cow to be a different breed from the Brown and White cows. Disable this is you don't want this and only want the highlander as an optional skin of the Brown cow.",
+            "AllowValues": "true, false",
+            "Default": "true"
+        }
+    },
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "{{ModId}}/Highlander, {{ModId}}/BabyHighlander",
+            "FromFile": "assets/{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "Highlander",
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+                "White Cow": {
+                    "AnimalIds": [
+                        "White Cow",
+                        "Brown Cow",
+                        "{{ModId}}_Highlander"
+                    ]
+                }
+            },
+            "When": {
+                "HighlanderBreed": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Entries": {
+                "{{ModId}}_Highlander": {
+                    "DisplayName": "Scottish Highlander",
+                    "House": "Barn",
+                    "Gender": "Female",
+                    "PurchasePrice": -1,
+                    "SellPrice": 1500,
+                    "ShopTexture": null,
+                    "ShopSourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 0,
+                        "Height": 0
+                    },
+                    "ShopDisplayName": null,
+                    "ShopDescription": null,
+                    "ShopMissingBuildingDescription": null,
+                    "RequiredBuilding": null,
+                    "UnlockCondition": null,
+                    "AlternatePurchaseTypes": null,
+                    "EggItemIds": null,
+                    "IncubationTime": -1,
+                    "IncubatorParentSheetOffset": 1,
+                    "BirthText": null,
+                    "DaysToMature": 5,
+                    "CanGetPregnant": true,
+                    "DaysToProduce": 1,
+                    "HarvestType": "HarvestWithTool",
+                    "HarvestTool": "Milk Pail",
+                    "ProduceItemIds": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "MinimumFriendship": 0,
+                            "ItemId": "184"
+                        }
+                    ],
+                    "DeluxeProduceItemIds": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "MinimumFriendship": 0,
+                            "ItemId": "186"
+                        }
+                    ],
+                    "ProduceOnMature": false,
+                    "FriendshipForFasterProduce": -1,
+                    "DeluxeProduceMinimumFriendship": 200,
+                    "DeluxeProduceCareDivisor": 1200.0,
+                    "DeluxeProduceLuckMultiplier": 0.0,
+                    "ProfessionForHappinessBoost": 3,
+                    "ProfessionForQualityBoost": 3,
+                    "ProfessionForFasterProduce": -1,
+                    "Sound": "cow",
+                    "BabySound": null,
+                    "Texture": "{{ModId}}/Highlander",
+                    "HarvestedTexture": null,
+                    "BabyTexture": "{{ModId}}/BabyHighlander",
+                    "UseFlippedRightForLeft": false,
+                    "SpriteWidth": 32,
+                    "SpriteHeight": 32,
+                    "EmoteOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "Skins": null,
+                    "ShadowWhenBabySwims": null,
+                    "ShadowWhenBaby": null,
+                    "ShadowWhenAdultSwims": null,
+                    "ShadowWhenAdult": null,
+                    "CanSwim": false,
+                    "BabiesFollowAdults": false,
+                    "GrassEatAmount": 4,
+                    "HappinessDrain": 5,
+                    "UpDownPetHitboxTileSize": "1, 1.75",
+                    "LeftRightPetHitboxTileSize": "1.75, 1.25",
+                    "BabyUpDownPetHitboxTileSize": "1, 1.75",
+                    "BabyLeftRightPetHitboxTileSize": "1.75, 1",
+                    "StatToIncrementOnProduce": null,
+                    "ShowInSummitCredits": false,
+                    "CustomFields": {}
+                }
+            },
+            "When": {
+                "HighlanderBreed": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "Brown Cow",
+                "Skins"
+            ],
+            "Entries": {
+                "{{ModId}}_Highlander": {
+                    "Id": "{{ModId}}_Highlander",
+                    "Texture": "{{ModId}}/Highlander",
+                    "BabyTexture": "{{ModId}}/BabyHighlander",
+                    "Weight": "1.0"
+                }
+            },
+            "When": {
+                "HighlanderBreed": false
+            }
+        }
+    ]
+}

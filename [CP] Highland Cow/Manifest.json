@@ -1,0 +1,13 @@
+{
+    "Name": "Highlander cow",
+    "Author": "AnimatedRice",
+    "Version": "1.0.1",
+    "Description": "Replaces the brown cow with a Scottish Highland Cow!",
+    "UniqueID": "AnimatedRice.Highlander",
+    "UpdateKeys": [
+      "GitHub:AnimatedRice/HighlanderCow"
+    ],
+    "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+    }
+  }
